@@ -17,10 +17,10 @@ const PageHeader = () => {
             </Col>
             <Col style={{ position: 'relative'}}>
                 <Space>
-                    <Button style={{float: 'right'}} shape="round" icon={<AuditOutlined />} size="large">
+                    <Button style={{float: 'right'}} shape="round" icon={<AuditOutlined />}>
                         Due Alerts
                     </Button>
-                    <Button shape="round" icon={<AreaChartOutlined />} size="large">
+                    <Button shape="round" icon={<AreaChartOutlined />}>
                         Live Alerts
                     </Button>
                 </Space>
