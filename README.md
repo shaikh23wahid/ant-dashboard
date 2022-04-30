@@ -17,7 +17,7 @@ $ npm install
 ### Start node server API(login API)
 // open comand promp/terminal and run below command:
 node server.js
-// you should get output as "API is running on http://localhost:8080/login"
+// you should get output as "API is running on http://localhost:3001/login"
 
 #### Run Webapck for ES6 and React
 
