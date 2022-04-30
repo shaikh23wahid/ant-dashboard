@@ -1,34 +1,40 @@
-import 'ant-design-pro/dist/ant-design-pro.css';
 import { Layout } from "antd";
 import "antd/dist/antd.css";
-import React from "react";
+import React, { Suspense, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Dashboard from './components/Dashboard/Dashboard';
-import Login from './components/Login/Login';
-import PageTopHeader from './components/PageTopHeader/PageTopHeader';
-import Report from './components/Report/Report';
-import SiderComponent from './components/SiderComponent/SiderComponent';
 import './styles.css';
-const { Header } = Layout;
+const Dashboard = React.lazy(() => import('./components/Dashboard/Dashboard'));
+const Login = React.lazy(() => import('./components/Login/Login'));
+const PageTopHeader = React.lazy(() => import('./components/PageTopHeader/PageTopHeader'));
+const Report = React.lazy(() => import('./components/Report/Report'));
+const SiderComponent = React.lazy(() => import('./components/SiderComponent/SiderComponent'));
+const NotFound = React.lazy(() => import('./components/NotFound/NotFound'));
 
 export default function App() {
+    const [token, setToken] = useState();
+
+    if (!token) {
+        return <Login setToken={setToken} />
+    }
+
     return (
         <div className="App">
             <Layout style={{
                 minHeight: '100vh',
             }}>
                 <Router>
-                    <SiderComponent />
-                    <Layout style={{ backgroundColor: "lightblue" }}>
-                        <Header style={{ backgroundColor: "whie", maxHeight: '40px' }}>
+                    <Suspense fallback={<span>Loading...</span>}>
+                        <SiderComponent />
+                        <Layout style={{ backgroundColor: "lightblue" }}>
                             <PageTopHeader />
-                        </Header>
-                        <Routes>
-                            <Route exact path='/' element={<Report />} />
-                            <Route exact path='/login' element={<Login />} />
-                            <Route path='/dashboard' element={<Dashboard />} />
-                        </Routes>
-                    </Layout>
+                            <Routes>
+                                <Route exact path='/' element={<Dashboard />} />
+                                <Route path='/dashboard' element={<Dashboard />} />
+                                <Route path='/report' element={<Report />} />
+                                <Route path="*" element={<NotFound />} />
+                            </Routes>
+                        </Layout>
+                    </Suspense>
                 </Router>
             </Layout>
         </div>

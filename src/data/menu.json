@@ -1,0 +1,90 @@
+{
+    "items": [
+        {
+            "key": "sub1",
+            "text": "Dashboard",
+            "items": [
+                {
+                    "key": 1,
+                    "text": "Overview",
+                    "route": "dashboard"
+                },
+                {
+                    "key": 2,
+                    "text": "Calendar",
+                    "route": "wahid"
+                },
+                {
+                    "key": 3,
+                    "text": "Schedule Actions"
+                },
+                {
+                    "key": 4,
+                    "text": "Live Alerts"
+                }
+            ]
+        },
+        {
+            "key": "sub2",
+            "text": "Report",
+            "items": [
+                {
+                    "key": 5,
+                    "text": "Pinned",
+                    "route": "report"
+                },
+                {
+                    "key": 6,
+                    "text": "Current"
+                },
+                {
+                    "key": 7,
+                    "text": "Export Reports"
+                },
+                {
+                    "key": 8,
+                    "text": "Your Security"
+                }
+            ]
+        },
+        {
+            "key": "sub3",
+            "text": "Documentation",
+            "items": [
+                {
+                    "key": 9,
+                    "text": "Release 1.0",
+                    "route": "release.1.0"
+                }
+            ]
+        },
+        {
+            "key": "sub4",
+            "text": "Blogs",
+            "items": [
+                {
+                    "key": 10,
+                    "text": "Option 10",
+                    "route": "current-affairs"
+                }
+            ]
+        },
+        {
+            "key": "sub5",
+            "text": "Need Help?",
+            "items": [
+                {
+                    "key": 11,
+                    "text": "Option 11",
+                    "items": [
+                        {
+                            "key": "sub6",
+                            "text": "Option 12",
+                            "route": "test"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

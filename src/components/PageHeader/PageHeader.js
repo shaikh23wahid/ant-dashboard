@@ -8,7 +8,7 @@ import {
 
 const PageHeader = () => {
     return (
-        <Row>
+        <Row style={{marginBottom: '20px'}}>
             <Col style={{ position: 'relative' }}>
                 <Button size="large" type="primary" icon={
                     <BellOutlined />} ></Button>

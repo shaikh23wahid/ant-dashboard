@@ -2,6 +2,11 @@ body {
   color: #6AAEE2; 
 }
 
+.pageStyle {
+  background-color:#F6F8FC !important;
+  text-align: left !important;
+}
+
 .logo {
   height: 40px; 
   background-color: #2779FE;
@@ -120,6 +125,7 @@ body {
 }
 
 .cardHeader .cardHeaderContent {
+  text-align: left;
   display: inline-block; 
   margin: 10px;
   position: relative;
@@ -158,8 +164,7 @@ body {
   padding: 10px;
 }
 
-.cardInnerContentPanel .organizationSection{
-  padding-top: 20px;
+.cardInnerContentPanel .organizationSection{ 
   font-size: 12px;
   display: inline;
 }
