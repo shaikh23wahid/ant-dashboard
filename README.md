@@ -23,7 +23,8 @@ node server.js
 
 ```bash
 // webpack
-$ npm start
+$ npm run dev // to run the application
+$ npm run build // to generate dist 
 ```
 
 #### Login details
